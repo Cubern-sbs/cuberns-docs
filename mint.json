@@ -32,8 +32,7 @@
     {
       "group": "API",
       "pages": [
-        "API/globalstate",
-        "API/types/Vec3"
+        "API/globalstate"
       ]
     },
     {
