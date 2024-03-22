@@ -35,8 +35,12 @@
         "API/globalstate",
         "API/types/Vec3"
       ]
-
-
+    },
+    {
+      "group": "Data Types",
+      "pages": [
+        "Data Types/Vec3"
+      ]
     }
   ]
   
