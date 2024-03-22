@@ -22,3 +22,25 @@ function sayHello()
     printl("Hello!")
 end
 ```
+
+#### `Push(VariableName, VariableValue, Overwrite = true)`
+The `Push` functions takes 2 variables in which `VariableName` must be a string and `VariableValue` can be of any. It also takes a 3rd optional variable which must be a boolean! The function is used to create/update a global variable. An example can be:
+```lua script1.clua
+GlobalState.Push("MyName", "Arexvy")
+wait(2)
+GlobalState.Push("MyName", 2) -- here we overwrite the value of previously declared variable "MyName" to a integer with value of 2
+```
+
+```lua script2.clua
+printl(GlobalState.Seek("MyName")) -- will print Arexvy
+```
+
+#### `Pop(VariableName)`
+The `Pop` function takes a variable which must be a string and be a value. It returns a bool value to tell if the action was successful or not. An example can be:
+```lua
+GlobalState.Push("MyName", "Arexvy")
+local success = GlobalState.Pop("MyName")
+if success then 
+    printl("Successfully removed global variable MyName")
+end
+```
