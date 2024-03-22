@@ -38,9 +38,9 @@
     {
       "group": "Data Types",
       "pages": [
-        "Data Types/Vec3",
-        "Data Types/Dictionary",
-        "Data Types/Col3"
+        "Types/Vec3",
+        "Types/Dictionary",
+        "Types/Col3"
       ]
     }
   ]
