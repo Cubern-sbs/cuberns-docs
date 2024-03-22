@@ -6,4 +6,19 @@ description: 'API Documentation for GlobalState class'
 <Warning>This class cannot be instanced a `.new()` function.</Warning>
 
 ## Functions
-#### `Seek()`
+#### `Seek(VariableName)`
+The `Seek` function is used to get a global variable stored. The `VariableName` should be a string value! It will return a `nil` value if no global variable by that name is given. An example can be:
+```lua
+printl(GlobalState.Seek("MyName"))
+```
+
+#### `SeekFunction(ScriptName, FunctionName)`
+The `SeekFunction` takes 2 variables which of both need to be strings. The function is used to run a function from 1 script to another. Here is an example!
+```lua script1.clua
+GlobalState.SeekFunction("script2", "sayHello")
+```
+```lua script2.clua
+function sayHello()
+    printl("Hello!")
+end
+```
