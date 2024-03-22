@@ -1,0 +1,31 @@
+---
+title: 'Col3'
+description: 'API Documentation for Col3 datatype.'
+---
+
+## Constructors
+#### `Col3.new(r, g, b, a)`
+`r`, `g` and `b` must be integers! `a` is an optional. An example:
+```lua
+local color3 = Col3.new(222, 422, 622)
+```
+
+## Properties
+#### `r`
+The property r component of the Vec3
+
+#### `g`
+The property g component of the Vec3
+
+#### `b`
+The property b component of the Vec3
+
+#### `a`
+The property a component of the Col3
+
+## Methods
+#### `FromHex(HexValue)`
+HexValue must be a string! An example:
+```lua
+local myColor3FromHex = Col3.FromHex("#FFFFFF")
+```
