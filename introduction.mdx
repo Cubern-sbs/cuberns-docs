@@ -1,58 +1,98 @@
 ---
-title: Introduction
-description: 'Welcome to the introducion page for learning clua!'
+title: 'Development'
+description: 'Learn how to preview changes locally'
 ---
 
-## Getting Started
+<Info>
+  **Prerequisite** You should have installed Node.js (version 18.10.0 or
+  higher).
+</Info>
 
-Make sure you have a cubern account and the workshop client installed.
-<CardGroup cols={2}>
-  <Card
-    title="Register An Account"
-    icon="pen-to-square"
-    href="https://cubern.sbs/register"
-  >
-    So you could access and use clua inside the workshop - duh!
-  </Card>
-  <Card
-    title="Downloading Workshop Client"
-    icon="image"
-    href="https://cubern.sbs/workshop"
-  >
-    The main client you will be using or basically cuberns game engine to allow make you games and public em on cubern!
-  </Card>
-</CardGroup>
+Step 1. Install Mintlify on your OS:
 
-## Learning Time
-Here we've listed all the things we recommend to start from - It will slowly become difficult and difficult!
+<CodeGroup>
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/components/accordion"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+```bash npm
+npm i -g mintlify
+```
+
+```bash yarn
+yarn global add mintlify
+```
+
+</CodeGroup>
+
+Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
+
+```bash
+mintlify dev
+```
+
+The documentation website is now available at `http://localhost:3000`.
+
+### Custom Ports
+
+Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
+
+```bash
+mintlify dev --port 3333
+```
+
+You will see an error like this if you try to run Mintlify in a port that's already taken:
+
+```md
+Error: listen EADDRINUSE: address already in use :::3000
+```
+
+## Mintlify Versions
+
+Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
+
+<CodeGroup>
+
+```bash npm
+npm i -g mintlify@latest
+```
+
+```bash yarn
+yarn global upgrade mintlify
+```
+
+</CodeGroup>
+
+## Deployment
+
+<Tip>
+  Unlimited editors available under the [Startup
+  Plan](https://mintlify.com/pricing)
+</Tip>
+
+You should see the following if the deploy successfully went through:
+
+<Frame>
+  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
+</Frame>
+
+## Troubleshooting
+
+Here's how to solve some common problems when working with the CLI.
+
+<AccordionGroup>
+  <Accordion title="Mintlify is not loading">
+    Update to Node v18. Run `mintlify install` and try again.
+  </Accordion>
+  <Accordion title="No such file or directory on Windows">
+Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
+folder. Then Open the Git Bash in this location and run `git clone
+https://github.com/mintlify/mint.git`.
+
+Repeat step 3.
+
+  </Accordion>
+  <Accordion title="Getting an unknown error">
+    Try navigating to the root of your device and delete the ~/.mintlify folder.
+    Then run `mintlify dev` again.
+  </Accordion>
+</AccordionGroup>
+
+Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
