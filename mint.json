@@ -39,7 +39,8 @@
     {
       "group": "Data Types",
       "pages": [
-        "Data Types/Vec3"
+        "Data Types/Vec3",
+        "Data Types/Dictionary"
       ]
     }
   ]

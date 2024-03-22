@@ -1,0 +1,28 @@
+---
+title: 'Dictionary'
+description: 'API Documentation for Dictionary.'
+---
+<Info>`Dictionary` data type is used where interaction with workshop takes place.</Info>
+
+### Constructors
+#### `Dictionary.new()`
+Returns a newly instanced dictionary. An example:
+```lua
+local MyDictionary = Dictionary.new()
+```
+
+### Methods
+#### `Add(Name, Value, Overwrite = true)`
+The `Add` function is used to add a new variable to the data type. Both `Name` and `Value` variables are compulsory. An example:
+```lua
+local MyDictionary = Dictionary.new()
+MyDictionary.Add("Duck", 2)
+```
+
+#### `Dictionary[Name]`
+You can access variables stored in `Dictionary` like an array! `Name` is compulsory. An example:
+```lua
+local MyDictionary = Dictionary.new()
+MyDictionary.Add("Duck", 2)
+printl(MyDictionary["Duck"]) -- prints 2
+```
