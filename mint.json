@@ -42,6 +42,12 @@
         "Types/Dictionary",
         "Types/Col3"
       ]
+    },
+    {
+      "group": "Tutorials",
+      "pages": [
+        "tutorials/basics"
+      ]
     }
   ]
   
