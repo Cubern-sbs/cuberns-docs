@@ -22,17 +22,13 @@ printl("This will be printed after 5 seconds!")
 #### Syntax
 Since clua extends lua, clua has the same syntax as lua! If you are not aware of the syntax of lua: not to worry! Check out the other tutorial to understand the syntax of lua!
 
-#### Functions called by workshop
-Since cubern and clua use `Godot 4.2`, we thought like gdscript why not introduce functions like `Process`, `PhysicsProcess`? They work in the same manner as gdscript `_process` etc work. 
-The `Process` function is called automatically on every frame and takes a parameter of `delta` which is a `float`! Here's an example:
-```lua process.clua
-function Process(delta) 
-    printl("This is called on every frame!!")
-end
+#### Accessing objects inside `Game>Map`
+In clua, accessing objects from `Map` is very straight-forward. For example a cube exists inside `Map` named `Cube1`. In-order to access it we will use:
+```lua script.clua
+local cube1 = Map["Cube1"]
 ```
-The `PhysicsProcess` function is also called automatically on every physics process and takes a parameter of `delta` and works the same way as `Process`
-```lua phsyicsprocess.clua
-function PhysicsProcess(delta) 
-    printl("This is called on every physics frame!")
-end
+Now we can access that cubes attributes or change them:
+```lua script.clua
+local cube1 = Map["Cube1"]
+printl(cube1.name)
 ```
