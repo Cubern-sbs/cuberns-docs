@@ -40,7 +40,7 @@
       "pages": [
         "Types/Vec3",
         "Types/Dictionary",
-        "Types/Col3"
+        "Types/Color3"
       ]
     },
     {
