@@ -1,18 +1,18 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Cubern",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#1c1c1c",
+    "light": "#dadada",
+    "dark": "#1c1c1c",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#292929",
+      "to": "#0c0f0e"
     }
   },
   "topbarLinks": [
@@ -33,7 +33,8 @@
       "group": "Classes",
       "pages": [
         "Classes/globalstate",
-        "Classes/Game"
+        "Classes/Game",
+        "Classes/ChatService"
       ]
     },
     {
@@ -47,7 +48,8 @@
     {
       "group": "Tutorials",
       "pages": [
-        "tutorials/basics"
+        "tutorials/basics",
+        "tutorials/signals"
       ]
     }
   ]

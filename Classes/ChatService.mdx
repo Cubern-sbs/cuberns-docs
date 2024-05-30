@@ -1,0 +1,27 @@
+---
+title: 'ChatService'
+description: 'ChatService is used to enable scripts to interact with chat'
+---
+
+<Warning>This class cannot be instanced by a `.new()` function.</Warning>
+
+## Functions
+#### `IsA()`
+This function returns a string with the name of class of any object. For example:
+```lua
+printl(Map["Cube"].IsA()) -- prints instance
+```
+
+#### `Push(string message)`
+This function will write a message into chat box and it will be shown to all of the clients. This function is only available on server sided scripts. Example:
+```lua
+local ChatService = Game:GetService("ChatService")
+ChatService.Push("Hi! to all clients from server.")
+```
+
+#### `PushToLocalClient(string message)`
+This function can only be called by client sided scripts. The message will only be shown to the local player. Example:
+```lua
+local ChatService = Game:GetService("ChatService")
+ChatService.PushToLocalClient("Tip: Press spacebar to jump!")
+```
