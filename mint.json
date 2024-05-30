@@ -45,6 +45,7 @@
       "group": "Data Types",
       "pages": [
         "Types/Vector3",
+        "Types/Vector2",
         "Types/Dictionary",
         "Types/Color3"
       ]
