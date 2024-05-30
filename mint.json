@@ -30,15 +30,16 @@
       ]
     },
     {
-      "group": "API",
+      "group": "Classes",
       "pages": [
-        "API/globalstate"
+        "Classes/globalstate",
+        "Classes/Game"
       ]
     },
     {
       "group": "Data Types",
       "pages": [
-        "Types/Vec3",
+        "Types/Vector3",
         "Types/Dictionary",
         "Types/Color3"
       ]
