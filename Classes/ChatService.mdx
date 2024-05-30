@@ -25,3 +25,15 @@ This function can only be called by client sided scripts. The message will only 
 local ChatService = Game:GetService("ChatService")
 ChatService.PushToLocalClient("Tip: Press spacebar to jump!")
 ```
+
+## Signals
+#### `OnMessage`
+This signal is called when the server or the client recieves a newer message. An example:
+```lua
+local ChatService = Game:GetService("ChatService")
+ChatService.Connect("OnMessage", __SCRIPT__, "FunctionToCall")
+
+function FunctionToCall(content) 
+    printl("Got a newer message: " + content)
+end
+```

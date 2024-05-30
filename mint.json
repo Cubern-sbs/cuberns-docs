@@ -34,7 +34,11 @@
       "pages": [
         "Classes/globalstate",
         "Classes/Game",
-        "Classes/ChatService"
+        "Classes/ChatService",
+        "Classes/Players",
+        "Classes/Player",
+        "Classes/HttpService",
+        "Classes/TweenService"
       ]
     },
     {
