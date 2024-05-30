@@ -15,6 +15,21 @@
       "to": "#0c0f0e"
     }
   },
+  "metadata": {
+      "og:image": "images/untitled.png"
+  },
+  "anchors": [
+      {
+          "name": "Official Lua Docs",
+          "icon": "code",
+          "url": "https://www.lua.org/docs.html"
+      },
+      {
+          "name": "Our Discord Server",
+          "icon": "discord",
+          "url": "https://discord.gg/BDxsfmN6Yz"
+      }
+  ],
   "topbarLinks": [
     {
       "name": "Cubern",
@@ -31,14 +46,25 @@
     },
     {
       "group": "Classes",
+      
       "pages": [
-        "Classes/globalstate",
         "Classes/Game",
         "Classes/ChatService",
         "Classes/Players",
         "Classes/Player",
         "Classes/HttpService",
-        "Classes/TweenService"
+        "Classes/NPC",
+        "Classes/Seat",
+        "Classes/TweenService",
+        "Classes/Spawnpoint",
+        "Classes/Sun",
+        "Classes/Datastore",
+        "Classes/PointLight",
+        "Classes/LocalStorage",
+        "Classes/Environment",
+        "Classes/Folder",
+        "Classes/ServerStorage",
+        "Classes/Instance"
       ]
     },
     {
@@ -46,8 +72,8 @@
       "pages": [
         "Types/Vector3",
         "Types/Vector2",
-        "Types/Dictionary",
-        "Types/Color3"
+        "Types/Color3",
+        "Types/Material"
       ]
     },
     {
@@ -55,6 +81,18 @@
       "pages": [
         "tutorials/basics",
         "tutorials/signals"
+      ]
+    },
+    {
+      "group": "Global",
+      "pages": [
+        "Global/Global",
+        {
+          "group": "Global Classes",
+          "pages": [
+            "Global/Classes/globalstate"
+          ]
+        }
       ]
     }
   ]

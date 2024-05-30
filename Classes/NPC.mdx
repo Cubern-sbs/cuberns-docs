@@ -1,5 +1,35 @@
 ---
 title: 'NPC'
 description: '`NPC` is a class which enables clua to interact with NPCS'
+icon: 'robot'
 ---
 
+## Functions
+#### `MoveTo(Vector3 newLocation)`
+This function makes the NPC move to a newer location. An example:
+```lua
+Map["NPC"]:MoveTo(Vector3.new(5, 5, 5))
+```
+
+## Signals
+#### `OnDestinationReached`
+This signal is called when a NPC has finished moving to its destination. An example:
+```lua
+Map["NPC"]:Connect("OnDestinationReached", __SCRIPT__, "FunctionToCall")
+Map["NPC"]:MoveTo(Vector3.new(5, 5, 5))
+
+function FunctionToCall()
+    printl("NPC Reached!")
+end
+```
+
+#### `OnDeath`
+This signal is called when a NPC dies. An example:
+```lua
+Map["NPC"]:Connect("OnDeath", __SCRIPT__, "FunctionToCall")
+Map["NPC"]:Kill()
+
+function FunctionToCall()
+    printl("NPC died!")
+end
+```
