@@ -17,8 +17,7 @@ icon: 'game-board-simple'
 #### `GetService(string service)`
 `GetService` is a function which recieves 1 parameter with the value type of string. It is used to return any child which acts as a service. The `service` can be like Map or LocalStorage. Example:
 ```lua
-local ChatService = Game:GetService("ChatService") -- Some services like ChatService can only be accessed by Serversided Scripts.
-ChatService.Push("This message is sent by the server and all clients can see it!")
+local ChatService = Game:GetService("HttpService") -- Some services like HttpService can only be accessed by Serversided Scripts.
 ```
 
 ## Signals

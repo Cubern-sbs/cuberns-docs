@@ -5,3 +5,13 @@ icon: 'arrow-right'
 ---
 
 ## Functions
+#### `TweenProperty(object, propertyName, value, time)`
+The `TweenProperty` is used to tween property of any object (if it is supported). An example:
+```lua
+local TweenService = Game:GetService("TweenService")
+
+TweenService:TweenProperty(Map["Cube"], "position", Vector3.new(5, 5, 5), 1.0)
+```
+
+## Signals
+#### `OnTweenCompleted`
