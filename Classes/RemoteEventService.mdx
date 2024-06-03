@@ -1,0 +1,49 @@
+---
+title: 'RemoteEventService'
+description: 'RemoteEventService'
+icon: 'circle-nodes'
+---
+<Warning>This class cannot be instanced by a `.new()` function.</Warning>
+
+## Functions
+#### `PushToClient(string username, string eventName, Table data)`
+<Info>This function can only be called by the server.</Info>
+This function is used to send data from server to client. An example:
+```lua
+local RemoteEventService = Game:GetService("RemoteEventService")
+local data = {
+    CastleName = "Castley",
+}
+local error = RemoteEventService:PushToClient("Cubern", "Event1", data)
+if error == nil then
+    printl("It is a success!")
+else
+    printl("It failed! The error is: " + error)
+end
+```
+
+#### `PushToAllClients(string eventName, Table data)`
+<Info>This function can only be called by the server.</Info>
+This function is used to send data from server to all connected clients. An example:
+```lua
+local RemoteEventService = Game:GetService("RemoteEventService")
+local data = {}
+local error = RemoteEventService:PushToAllClients("Event1", data)
+if error == nil then
+    printl("It is a success!")
+else
+    printl("It failed! The error is: " + error)
+end
+```
+
+#### `ConnectEvent(string eventName, Table data)`
+<Info>This function can only be called by the client.</Info>
+This function is used by the client to register a connection that when a event by the value of `eventName` is fired by server: the connected function will be called.
+```lua
+local RemoteEventService = Game:GetService("RemoteEventService")
+RemoteEventService:ConnectEvent("Event1", __SCRIPT__, "FunctionCall") -- since we had registered the event by name of "Event1" we will use "Event1" as first paramter
+
+function FunctionToCall(data)
+    printl(data.CastleName)
+end
+```

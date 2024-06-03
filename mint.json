@@ -64,7 +64,8 @@
         "Classes/Environment",
         "Classes/Folder",
         "Classes/ServerStorage",
-        "Classes/Instance"
+        "Classes/Instance",
+        "Classes/RemoteEventService"
       ]
     },
     {
