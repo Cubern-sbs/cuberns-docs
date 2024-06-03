@@ -15,3 +15,10 @@ The `printl` function is basically the `print` of clua. It is used for debugging
 ```lua
 printl("Hello World!")
 ```
+
+## Global Variables
+#### `__SCRIPT__`
+The `__SCRIPT__`` variable is used in functions like `Connect`. It is used to return the name of the script. Example:
+```lua
+printl(__SCRIPT__) -- Will print LocalScriptName
+```
