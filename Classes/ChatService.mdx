@@ -35,6 +35,6 @@ local ChatService = Game:GetService("ChatService")
 ChatService.Connect("OnMessage", __SCRIPT__, "FunctionToCall")
 
 function FunctionToCall(content) 
-    printl("Got a newer message: " + content)
+    printl("Got a newer message: " .. content)
 end
 ```

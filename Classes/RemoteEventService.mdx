@@ -18,7 +18,7 @@ local error = RemoteEventService:PushToClient("Cubern", "Event1", data)
 if error == nil then
     printl("It is a success!")
 else
-    printl("It failed! The error is: " + error)
+    printl("It failed! The error is: " .. error)
 end
 ```
 
@@ -32,7 +32,7 @@ local error = RemoteEventService:PushToAllClients("Event1", data)
 if error == nil then
     printl("It is a success!")
 else
-    printl("It failed! The error is: " + error)
+    printl("It failed! The error is: " .. error)
 end
 ```
 
@@ -47,14 +47,14 @@ local error = RemoteEventService:SendEventToServer("Event1", data)
 if error == nil then
     printl("Sent!")
 else 
-    printl("Err!! " + error)
+    printl("Err!! " .. error)
 end
 ```
 ```lua server.clua
 local RemoteEventService = Game:GetService("RemoteEventService")
 RemoteEventService:ConnectEvent("Event1", __SCRIPT__, "FunctionCall") -- since we had registered the event by name of "Event1" on client we will use "Event1" as first paramter
 function FunctionToCall(data, username)
-    printl("Server recieved data from: " + username)
+    printl("Server recieved data from: " .. username)
 end
 ```
 </CodeGroup>

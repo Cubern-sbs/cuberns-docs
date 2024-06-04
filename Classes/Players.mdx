@@ -37,7 +37,7 @@ local ChatService = Game:GetService("ChatService")
 Players:Connect("OnPlayerEntered", __SCRIPT__, "FunctionToCall")
 
 function FunctionToCall(Player)
-    ChatService:Push("Everybody! Welcome: " + Player.username);
+    ChatService:Push("Everybody! Welcome: " .. Player.username);
 end
 ```
 
@@ -49,6 +49,6 @@ local ChatService = Game:GetService("ChatService")
 Players:Connect("OnPlayerLeft", __SCRIPT__, "FunctionToCall")
 
 function FunctionToCall(Player)
-    ChatService:Push("Goodbye " + Player.username + "! We hope to see you again!");
+    ChatService:Push("Goodbye " .. Player.username .. "! We hope to see you again!");
 end
 ```

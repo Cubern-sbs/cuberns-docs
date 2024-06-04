@@ -18,7 +18,7 @@ This signal is called when a player sits on the seat. An example:
 Map["Seat"]:Connect("OnPlayerSit", __SCRIPT__, "FunctionToCall")
 
 function FunctionToCall(player) 
-    printl(player.username + " just took the seat!")
+    printl(player.username .. " just took the seat!")
 end
 ```
 
@@ -28,6 +28,6 @@ This signal is called when a player leaves the seat. An example:
 Map["Seat"]:Connect("OnPlayerLeft", __SCRIPT__, "FunctionToCall")
 
 function FunctionToCall(player) 
-    printl(player.username + " just left the seat!")
+    printl(player.username .. " just left the seat!")
 end
 ```
