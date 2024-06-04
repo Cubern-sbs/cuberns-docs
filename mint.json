@@ -41,6 +41,14 @@
       ]
     },
     {
+      "group": "Tutorials",
+      "pages": [
+        "tutorials/basics",
+        "tutorials/signals",
+        "tutorials/error-handling"
+      ]
+    },
+    {
       "group": "Classes",
       
       "pages": [
@@ -71,13 +79,6 @@
         "Types/Vector2",
         "Types/Color3",
         "Types/Material"
-      ]
-    },
-    {
-      "group": "Tutorials",
-      "pages": [
-        "tutorials/basics",
-        "tutorials/signals"
       ]
     },
     {
