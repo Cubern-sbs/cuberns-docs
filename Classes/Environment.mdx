@@ -3,3 +3,26 @@ title: 'Environment'
 description: 'Environment'
 icon: "earth-americas"
 ---
+<Warning>This class cannot be instanced by a `.new()` function.</Warning>
+<Warning>This class is yet to be worked on.</Warning>
+## Properties
+#### `Brightness: float`
+
+#### `AmbientLightColor: Color3`
+
+#### `FogDensity: float`
+
+#### `FogEnabled: bool`
+
+#### `FogHeightDensity: float`
+
+#### `GlowEnabled: bool`
+
+#### `GlowIntensity: float`
+
+## Functions
+#### `Default()`
+Makes the environment go to default lighting. An example:
+```lua
+Game:GetService("Environment"):Default()
+```
