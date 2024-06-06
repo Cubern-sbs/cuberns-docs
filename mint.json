@@ -62,6 +62,7 @@
         "Classes/TweenService",
         "Classes/Spawnpoint",
         "Classes/Sun",
+        "Classes/SoundPlayer",
         "Classes/Datastore",
         "Classes/PointLight",
         "Classes/LocalStorage",

@@ -24,9 +24,9 @@ local HttpService = Game:GetService("HttpService") -- Some services like HttpSer
 #### `OnGameClose`
 This signal is called right before the game exits. Example:
 ```lua
-Game:Connect("OnGameClose", __SCRIPT__, "FunctonToBeCalledOnExit")
+Game:Connect("OnGameClose", __SCRIPT__, "FunctionToBeCalledOnExit")
 
-function FunctonToBeCalledOnExit()
+function FunctionToBeCalledOnExit()
     printl("Bye!")
 end
 ```
