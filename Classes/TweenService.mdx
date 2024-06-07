@@ -3,16 +3,11 @@ title: 'TweenService'
 description: '`TweenService` is a class used for tweening objects'
 icon: 'arrow-right'
 ---
-<Warning>This class is half-completed.</Warning>
 <Warning>This class cannot be instanced by a `.new()` function.</Warning>
 ## Functions
-#### `TweenProperty(object, propertyName, value, time)`
-The `TweenProperty` is used to tween property of any object (if it is supported). An example:
+#### `Create`
+Returns a Tween. An example:
 ```lua
 local TweenService = Game:GetService("TweenService")
-
-TweenService:TweenProperty(Map["Cube"], "position", Vector3.new(5, 5, 5), 1.0)
+local myTween = TweenService:Create()
 ```
-
-## Signals
-#### `OnTweenCompleted`

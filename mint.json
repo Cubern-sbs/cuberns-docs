@@ -60,6 +60,7 @@
         "Classes/NPC",
         "Classes/Seat",
         "Classes/TweenService",
+        "Classes/Tween",
         "Classes/Spawnpoint",
         "Classes/Sun",
         "Classes/SoundPlayer",
