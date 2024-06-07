@@ -24,12 +24,15 @@ Sets the position from which audio will be played, in seconds.
 #### `get_playback_position(): float`
 Returns the position of sound in the SoundPlayer in seconds.
 
+#### `load(int sound_id)`
+Loads the given sound_id into sound player.
+
 ## Signals
 #### `loaded`
 Called when the client has successfully downloaded the sound effect. Example:
 ```lua
 SoundPlayer:Connect("Loaded", __SCRIPT__, "functionToCall")
-SoundPlayer.LoadIn(12234)
+SoundPlayer:load(12234)
 
 function functionToCall()
     SoundPlayer.Play()
