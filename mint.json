@@ -64,7 +64,7 @@
         "Classes/Spawnpoint",
         "Classes/Sun",
         "Classes/SoundPlayer",
-        "Classes/DataStore",
+        "Classes/Datastore",
         "Classes/DataStoreService",
         "Classes/PointLight",
         "Classes/LocalStorage",
