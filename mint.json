@@ -56,7 +56,7 @@
         "Classes/ChatService",
         "Classes/Players",
         "Classes/Player",
-        "Classes/HttpService",
+        "Classes/HttpService", 
         "Classes/NPC",
         "Classes/Seat",
         "Classes/TweenService",
