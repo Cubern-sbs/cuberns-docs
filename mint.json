@@ -71,7 +71,7 @@
         "Classes/Environment",
         "Classes/Folder",
         "Classes/ServerStorage",
-        "Classes/Instance",
+        "Classes/Part",
         "Classes/RemoteEventService"
       ]
     },
