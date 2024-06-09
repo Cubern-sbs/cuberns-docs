@@ -3,11 +3,11 @@ title: 'Part'
 description: 'Part'
 icon: 'cube'
 ---
+<Info>
+  This class inherits `Instance` which means that all properties, functions and signals from Instance can be used.
+</Info>
 
 ## Properties
-#### `name: string`
-Returns the name of the `Instance`
-
 #### `shape: string`
 Returns the shape of `Instance`
 
@@ -36,65 +36,9 @@ Returns the color of `Instance`
 Returns the material of `Instance`
 
 ## Functions
-#### `FindFirstChild(string name)`
-Returns the child with the name given in parameter else it returns `Nil`. An example:
-```lua
-Map["Cube"]:FindFirstChild("cube1").anchored = true
-```
-
 #### `IsA()`
 Returns a string of class name. An example:
 ```lua
 printl(Map["Cube"].IsA())
 ```
 
-#### `Destroy()`
-Destroys the `Instance`. An example:
-```lua
-Map["Cube"]:Destroy()
-```
-
-## Signals
-#### `OnBodyEntered`
-This signal is called when a Body enters the `Instance` or touches it. An example:
-```lua
-Map["Cube"]:Connect("OnBodyEntered", __SCRIPT__, "FunctionToCall")
-
-function FunctionToCall(Body)
-    if Body.IsA() == "Player" then
-        printl("Its a player!")
-    end
-end
-```
-
-#### `OnBodyExited`
-This signal is called when a Body leaves the `Instance` or stops touching it. An example:
-```lua
-Map["Cube"]:Connect("OnBodyExited", __SCRIPT__, "FunctionToCall")
-
-function FunctionToCall(Body)
-    if Body.IsA() == "Player" then
-        printl("Player! left")
-    end
-end
-```
-
-#### `OnMouseEntered`
-This signal is called when a mouse hovers over the `Instance`. An example:
-```lua
-Map["Cube"]:Connect("OnMouseEntered", __SCRIPT__, "FunctionToCall")
-
-function FunctionToCall()
-    printl("Mouse entered!")
-end
-```
-
-#### `OnMouseExited`
-This signal is called when a mouse leaves over the `Instance`. An example:
-```lua
-Map["Cube"]:Connect("OnMouseExited", __SCRIPT__, "FunctionToCall")
-
-function FunctionToCall()
-    printl("Mouse left!")
-end
-```

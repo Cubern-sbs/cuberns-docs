@@ -1,0 +1,75 @@
+---
+title: 'Instance'
+description: 'Instance'
+icon: 'cube'
+---
+<Warning>You cannot Instance this class with `Instance.new()`</Warning>
+## Properties
+#### `name: string`
+Returns the name of the `Instance`
+
+## Functions
+#### `FindFirstChild(string name)`
+Returns the child with the name given in parameter else it returns `Nil`. An example:
+```lua
+Map["Cube"]:FindFirstChild("cube1").anchored = true
+```
+
+#### `Destroy()`
+Destroys the `Instance`. An example:
+```lua
+Map["Cube"]:Destroy()
+```
+
+#### `new(string className)`
+Create a new instance. An example:
+```lua
+local part = Instance.new("Part")
+part.name = "MyCube"
+part.shape = "Cube"
+part.SetParent(Map["Folder"])
+```
+## Signals
+#### `OnBodyEntered`
+This signal is called when a Body enters the `Instance` or touches it. An example:
+```lua
+Map["Cube"]:Connect("OnBodyEntered", __SCRIPT__, "FunctionToCall")
+
+function FunctionToCall(Body)
+    if Body.IsA() == "Player" then
+        printl("Its a player!")
+    end
+end
+```
+
+#### `OnBodyExited`
+This signal is called when a Body leaves the `Instance` or stops touching it. An example:
+```lua
+Map["Cube"]:Connect("OnBodyExited", __SCRIPT__, "FunctionToCall")
+
+function FunctionToCall(Body)
+    if Body.IsA() == "Player" then
+        printl("Player! left")
+    end
+end
+```
+
+#### `OnMouseEntered`
+This signal is called when a mouse hovers over the `Instance`. An example:
+```lua
+Map["Cube"]:Connect("OnMouseEntered", __SCRIPT__, "FunctionToCall")
+
+function FunctionToCall()
+    printl("Mouse entered!")
+end
+```
+
+#### `OnMouseExited`
+This signal is called when a mouse leaves over the `Instance`. An example:
+```lua
+Map["Cube"]:Connect("OnMouseExited", __SCRIPT__, "FunctionToCall")
+
+function FunctionToCall()
+    printl("Mouse left!")
+end
+```

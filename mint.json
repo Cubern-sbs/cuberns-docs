@@ -61,6 +61,7 @@
         "Classes/Seat",
         "Classes/TweenService",
         "Classes/Tween",
+        "Classes/Map",
         "Classes/Spawnpoint",
         "Classes/Sun",
         "Classes/SoundPlayer",
@@ -72,6 +73,7 @@
         "Classes/Folder",
         "Classes/ServerStorage",
         "Classes/Part",
+        "Classes/Instance",
         "Classes/RemoteEventService"
       ]
     },
