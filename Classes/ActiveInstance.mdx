@@ -1,0 +1,26 @@
+---
+title: 'ActiveInstance'
+description: 'ActiveInstance'
+icon: 'rocket'
+---
+<Info>
+  This class inherits `Instance` which means that all properties, functions and signals from Instance can be used.
+</Info> 
+<Warning>You cannot Instance this class with `Instance.new()`</Warning>
+
+## Properties
+#### `position: Vector3`
+Returns the position of `Instance`
+
+#### `scale: Vector3`
+Returns the scale of `Instance`
+
+#### `rotation: Vector3`
+Returns the rotation of `Instance`
+
+## Functions 
+#### `LookAt(Vector3 to)`
+An example:
+```lua
+Map["Cube"]:LookAt(Map["Cube1"].position)
+```
