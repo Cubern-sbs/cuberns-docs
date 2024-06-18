@@ -94,11 +94,12 @@
         {
           "group": "Global Classes",
           "pages": [
-            "Global/Classes/globalstate"
+            "Global/Classes/globalstate",
+            "Global/Classes/Json",
+            "Global/Classes/Engine"
           ]
         }
       ]
     }
   ]
-  
-  }
+}
