@@ -53,6 +53,7 @@
       
       "pages": [
         "Classes/Game",
+        "Classes/TeleportService",
         "Classes/ChatService",
         "Classes/Players",
         "Classes/Player",
