@@ -35,6 +35,13 @@ WalkSpeed property holds a float value which is the walk speed of a player. This
 #### `Sitting: bool`
 Sitting property holds a bool value which tells if a player is sitting or not. 
 
+#### `Avatar: Array`
+Holds avatar data. Like:
+```lua
+local Cubern = Game:GetService("Player"):GetPlayer("Cubern")
+Cubern.Avatar["Hat1"].Rotation = Vector3.new(10, 10, 10)
+```
+
 ## Functions
 #### `Kill()`
 This function can only be called by server sided scripts and client sided scripts but only for localPlayer. An example:

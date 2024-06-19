@@ -74,6 +74,7 @@
         "Classes/Folder",
         "Classes/ServerStorage",
         "Classes/Part",
+        "Classes/MeshPart",
         "Classes/Instance",
         "Classes/ActiveInstance",
         "Classes/RemoteEventService"

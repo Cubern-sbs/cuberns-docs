@@ -1,0 +1,27 @@
+---
+title: 'MeshPart'
+description: 'MeshPart'
+icon: 'mushroom'
+---
+<Info>
+  This class inherits `Part` which means that all properties, functions and signals from Part can be used.
+</Info>
+
+## Properties
+#### `mesh_id: int`
+Specifies `mesh_id`. The value cannot be changed if any existing mesh is being loaded.
+
+## Functions
+#### `Play(string animationName)`
+This function will play animation (if any found by name of `animationName` parameter). An example:
+```lua
+local meshPart = Map["AnimatedCube"]
+meshPart:Play("Bounce");
+```
+
+#### `PlayBackwards(string animationName)`
+This function will play animation backwards (if any found by name of `animationName` parameter). An example:
+```lua
+local meshPart = Map["AnimatedCube"]
+meshPart:PlayBackwards("Bounce");
+```
