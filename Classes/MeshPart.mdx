@@ -11,6 +11,12 @@ icon: 'mushroom'
 #### `mesh_id: int`
 Specifies `mesh_id`. The value cannot be changed if any existing mesh is being loaded.
 
+#### `play_anim_on_start: string`
+The string value named animation will be played on start. 
+
+##### `currently_running: string`
+Returns name of animation currently running only if any else returns empty string. 
+
 ## Functions
 #### `Play(string animationName)`
 This function will play animation (if any found by name of `animationName` parameter). An example:
@@ -25,3 +31,21 @@ This function will play animation backwards (if any found by name of `animationN
 local meshPart = Map["AnimatedCube"]
 meshPart:PlayBackwards("Bounce");
 ```
+
+#### `StopAnimation()`
+The function will stop a playing animation. An example:
+```lua
+local meshPart = Map["AnimatedCube"]
+meshPart:PlayBackwards("Bounce");
+wait(0.2)
+meshPart:StopAnimation()
+```
+
+#### `GetAnimations()`
+This function will return a list of name of animations inside the mesh. If none then returns nil. An example:
+```lua
+local meshPart = Map["AnimatedCube"]
+local listOfAnims = meshPart:GetAnimations()
+```
+
+#### 
