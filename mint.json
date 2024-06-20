@@ -55,6 +55,7 @@
         "Classes/Game",
         "Classes/WarpService",
         "Classes/ChatService",
+        "Classes/InputService",
         "Classes/Players",
         "Classes/Player",
         "Classes/HttpService", 
@@ -87,6 +88,12 @@
         "Types/Vector2",
         "Types/Color3",
         "Types/Material"
+      ]
+    },
+    {
+      "group": "Enums",
+      "pages": [
+        "Enums/KeyList"
       ]
     },
     {
