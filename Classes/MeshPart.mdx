@@ -10,6 +10,9 @@ icon: 'mushroom'
   Cuberns `MeshPart` only support `.glb`. If you manage to import a `.gltf`: it won't work in playtest or exported build.
 </Note>
 ## Properties
+#### `let_engine_make_collisions: bool`
+Specifies if the engine should make collisions of mesh by itself. It has a significant impact on performance. This should only be used for structures which do not follow a single shape.
+
 #### `mesh_id: int`
 Specifies `mesh_id`. The value cannot be changed if any existing mesh is being loaded.
 
