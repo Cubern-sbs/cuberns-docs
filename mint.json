@@ -45,7 +45,15 @@
       "pages": [
         "tutorials/basics",
         "tutorials/signals",
-        "tutorials/error-handling"
+        "tutorials/error-handling",
+        "tutorials/starter-character"
+      ]
+    },
+    {
+      "group": "Abstract Classes",
+      "pages": [
+        "Abstract-Classes/Instance",
+        "Abstract-Classes/ActiveInstance"
       ]
     },
     {
@@ -76,8 +84,6 @@
         "Classes/ServerStorage",
         "Classes/Part",
         "Classes/MeshPart",
-        "Classes/Instance",
-        "Classes/ActiveInstance",
         "Classes/RemoteEventService"
       ]
     },

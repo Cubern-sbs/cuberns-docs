@@ -3,7 +3,8 @@ title: 'Instance'
 description: 'Instance'
 icon: 'cube'
 ---
-<Warning>You cannot Instance this class with `Instance.new()`</Warning>
+<Warning>You cannot Instance this class with `Instance.new()`. Because this is an abstract class.</Warning>
+
 ## Properties
 #### `name: string`
 Returns the name of the `Instance`
@@ -20,6 +21,8 @@ Destroys the `Instance`. An example:
 ```lua
 Map["Cube"]:Destroy()
 ```
+#### `IsA()`
+Returns the type of the object as a string.
 
 #### `new(string className)`
 Create a new instance. An example:

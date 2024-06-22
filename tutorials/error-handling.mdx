@@ -3,6 +3,9 @@ title: 'Error Handling'
 description: 'Understanding how to detect and manage errors'
 icon: 'seal-exclamation'
 ---
+### Soft errors vs Regular errors
+Soft errors are errors which would occur however the script would still continue its execution. Regular errors will stop the script from proceeding.
+
 ### With `Connect`
 We are actively working to make error handling very easy. In functions like `Connect` or `ConnectEvent` clua will return nil or a string. If a error occurs: then it will return a string which will be the error message. 
 Let us see an example:
