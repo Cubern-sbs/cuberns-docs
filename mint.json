@@ -52,7 +52,8 @@
         "tutorials/basics",
         "tutorials/signals",
         "tutorials/error-handling",
-        "tutorials/starter-character"
+        "tutorials/starter-character",
+        "tutorials/using-team-create"
       ]
     },
     {
@@ -72,7 +73,6 @@
         "Classes/InputService",
         "Classes/Players",
         "Classes/Player",
-        "Classes/HttpService", 
         "Classes/NPC",
         "Classes/Seat",
         "Classes/TweenService",
