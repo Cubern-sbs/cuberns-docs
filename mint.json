@@ -37,7 +37,8 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "updates"
+        "updates",
+        "clua-v-lua"
       ]
     },
     {

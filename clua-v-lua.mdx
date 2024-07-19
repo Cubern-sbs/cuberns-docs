@@ -1,0 +1,117 @@
+---
+title: 'Clua VS Lua'
+description: 'Understanding the difference between clua and lua'
+icon: 'c'
+---
+
+Clua is basically lua but with little more features. In this tutorial we will go over the differences. Clua uses moonsharp but with improvements and changes.
+
+## Namespaces (planned)
+Unlike lua, clua has namespaces. A namespace provides a container to hold things like functions, classes and constants as a way to group them together logically. Here is an example of declaring a namespace:
+```lua script1.clua
+namespace MyNameSpace {
+    function SayHi() 
+        printl("Hi!")
+    end
+}
+-- it is not planned to add support for using dots (.) in namespace names
+```
+
+And in another script:
+```lua script2.clua
+using MyNameSpace
+
+SayHi()
+```
+
+## Constants (added)
+Lua does not have `const` keyword. A `const` prevents the value from being overwritten or changed. An example can be:
+```lua
+const MyName = "Arexvy." -- this constant variable cannot also be changed by other scripts
+MyName = "Arexvyy" -- this will error: "Cannot change a value of a constant variable."
+```
+
+## Reserved functions (added)
+Clua has "reserved" functions. This keyword basically tells the interpreter that this function is probably/going to be called by the engine. An example:
+```lua
+reserved function PhysicsProcess(delta)
+    -- this will be called automatically on every physic frame
+end
+
+function PhysicsProcess(delta)
+    -- this will not be called automatically on every physic frame since it is not a reserved function
+end
+```
+> Reserved functions are only supported with functions which would be called by the engine.
+
+## Getters and Setters (In-progress)
+Lua does not offer getters or setters for variables. But, clua does!
+
+#### Getters
+Getters are automatically called whenever a variable is accessed at any line of the code. For example:
+```lua
+local Cubes = 2
+
+get Cubes()
+    printl("Attempted to access cubes variable!")
+    return Cubes
+end
+
+print(Cubes) -- this will also cause the getter function to be called automatically! So "Attempted to access cubes variable!" will be printed too!
+```
+
+#### Setters 
+Setters are automatically called whenever a attempt is made to write a newer value to a variable.
+```lua
+local Cubes = 2
+
+set Cubes(value)
+    printl("Attempted to set cubes value to" .. value)
+    Cubes = value
+end
+
+Cubes = 4 -- triggers it
+```
+
+## `@doc` (added)
+The `@doc` keyword can be used for documenting.
+Like:
+```lua
+@doc "This function will add"
+function add(a, b)
+    return a + b
+end
+```
+
+The statement can also be without the double quotes:
+```lua
+@doc This function will add
+function add(a, b)
+    return a + b
+end
+```
+since the interpreter for-now treats it just like a comment!
+
+## istr (planned)
+The `istr` keyword basically registers a immutable string variable. This also means that it only supports holding of a string type! 
+An example:
+```lua
+istr mySentence = "So I was watching a"
+mySentence = mySentence .. "movie." -- this will error: "Attempt to modify an immutable string"
+```
+
+## switch (planned)
+The `switch` keyword basically generates a switch case pattern. An example:
+```lua
+local value = 2
+switch value do
+    case 1:
+        printl("One")
+        break
+    case 2:
+        printl("Two")
+        break
+    default:
+        printl("Other")
+end
+```
