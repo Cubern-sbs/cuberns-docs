@@ -6,3 +6,15 @@ icon: 'signal-stream'
 
 <Warning>Cubern doesnt currently support ability to connect signals through the workshop hence you need to connect through clua</Warning>
 <Info>It is planned to allow several signal connections with 1 signal</Info>
+
+Signals are used to automatically call a `@signal` function whenever something happens. For example the `OnMouseEntered` signal which is called whenever a mouse pointer enters the object. An example:
+```lua
+Map["Cube"]:Connect("OnMouseEntered", __SCRIPT__, "FunctionToCall")
+
+@signal FunctionToCall()
+    printl("Mouse entered!")
+end
+```
+
+### Why do I need to use `@signal` instead of `function`? 
+Well the reason is to have prettier code or code which is more understanding and readable.
