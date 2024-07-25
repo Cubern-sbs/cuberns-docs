@@ -6,7 +6,7 @@ icon: 'c'
 
 Clua is basically lua but with little more features. In this tutorial we will go over the differences. Clua uses moonsharp but with improvements and changes.
 
-## Getters and Setters (added)
+## Getters and Setters
 Lua does not have support for getters or setters by default. In clua you will find support for getters and setters. 
 
 ### Getters
@@ -57,14 +57,25 @@ end
 This block of code will print "My name now is: Cubarb".
 
 
-## Constants (added)
+## Constants
 Lua does not have `const` keyword. A `const` prevents the value from being overwritten or changed. An example can be:
 ```lua
 const MyName = "Arexvy." -- this constant variable cannot also be changed by other scripts
 MyName = "Arexvyy" -- this will error: "Cannot change a value of a constant variable."
 ```
 
-## Reserved functions (added)
+<Info>Constants being used wrong will throw a error when being compiled to bytecode!</Info>
+For example:
+```lua
+const duck = 2
+
+function neverCalledFunction()
+    duck = 3
+end
+```
+This will generate a error even though that function is never called!
+
+## Reserved functions
 Clua has "reserved" functions. This keyword basically tells the interpreter that this function is probably/going to be called by the engine. An example:
 ```lua
 reserved function PhysicsProcess(delta)
@@ -77,7 +88,7 @@ end
 ```
 > Reserved functions are only supported with functions which would be called by the engine.
 
-## `@doc` (added)
+## `@doc`
 The `@doc` keyword can be used for documenting.
 Like:
 ```lua
@@ -96,7 +107,7 @@ end
 ```
 since the interpreter for-now treats it just like a comment!
 
-## istr (planned)
+## istr
 The `istr` keyword basically registers a immutable string variable. This also means that it only supports holding of a string type! 
 An example:
 ```lua
@@ -104,18 +115,17 @@ istr mySentence = "So I was watching a"
 mySentence = mySentence .. "movie." -- this will error: "Attempt to modify an immutable string"
 ```
 
-## switch (planned)
+## switch
 The `switch` keyword basically generates a switch case pattern. An example:
 ```lua
-local value = 2
-switch value do
-    case 1:
-        printl("One")
-        break
-    case 2:
-        printl("Two")
-        break
-    default:
-        printl("Other")
-end
+local MyVariable = 0
+switch(MyVariable) {
+    case(0) (function()
+        printl("The value is indeed zero.")
+    end),
+    default(function()
+        printl("The value is not zero.")
+    end)
+}
 ```
+> Please know that the switch case is just a clua written module and the interpreter does not have a switch functionality. This restricts creating functions like: `init` or `compare`.
