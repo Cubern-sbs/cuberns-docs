@@ -32,6 +32,18 @@ part.name = "MyCube"
 part.shape = "Cube"
 part.SetParent(Map["Folder"])
 ```
+
+#### `SetAttribute(string attribute_name, object attribute_value)`
+This will set a custom assigned attribute. Which can be accessed by also other scripts.
+```lua
+Map["Cube"].SetAttribute("IsThisMyFavourateCube", true)
+```
+#### `GetAttribute(string attribute_name)`
+This will get a custom assigned attribute. Which can be accessed by also other scripts.
+```lua
+printl(Map["Cube"].GetAttribute("IsThisMyFavourateCube")) -- this will print true
+```
+
 ## Signals
 #### `OnBodyEntered`
 This signal is called when a Body enters the `Instance` or touches it. An example:
