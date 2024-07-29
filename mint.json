@@ -32,6 +32,12 @@
       "url": "https://cubern.sbs"
     }
   ],
+  "tabs": [
+    {
+        "name": "Plugins",
+        "url": "plugins"
+    }
+],
   "navigation": [
     {
       "group": "Get Started",
@@ -45,6 +51,18 @@
       "group": "Errors",
       "pages": [
         "Errors/index"
+      ]
+    },
+    {
+      "group": "Plugins",
+      "pages": [
+        "plugins/overview"
+      ]
+    },
+    {
+      "group": "API",
+      "pages": [
+        "plugins/API/object"
       ]
     },
     {
