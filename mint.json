@@ -43,7 +43,6 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "updates",
         "clua-v-lua"
       ]
     },
@@ -59,10 +58,11 @@
         "plugins/overview"
       ]
     },
+    
     {
       "group": "API",
       "pages": [
-        "plugins/API/object"
+        "plugins/API/pluginservices"
       ]
     },
     {
