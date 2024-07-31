@@ -129,3 +129,58 @@ switch(MyVariable) {
 }
 ```
 > Please know that the switch case is just a clua written module and the interpreter does not have a switch functionality. This restricts creating functions like: `init` or `compare`.
+
+## class
+The `class` function basically generates a class which can take one optional "base" which should be another class. An example:
+```lua
+-- In order for us to register a class we can do:
+Person = class()
+
+-- The classes can have a "_init_" function:
+function Person:_init_(name, age)
+    self.name = name
+    self.age = age
+end
+
+-- this function will be automatically called when a class is instanced.
+-- to register a function we can do:
+function Person:greet()
+    print("Hello, my name is " .. self.name)
+end
+-- where `greet` is the function name and the `Person` is the class where it belongs to.
+-- now we can instance the class:
+local MeAsPersonClass = Person:new("Arexvy", 16)
+MeAsPersonClass:greet() -- this will print "Hello, my name is Arexvy"
+```
+
+Scripts can also inherit another class. For example:
+```lua
+Person = class()
+
+function Person:_init_(name, age)
+    self.name = name
+    self.age = age
+end
+
+function Person:greet()
+    print("Hello, my name is " .. self.name)
+end
+
+Worker = class(Person)
+
+function Worker:_init_(name, age, job)
+    Person._init_(self, name, age)  -- Call the parent constructor because it expects
+    self.job = job
+end
+
+function Worker:whatsUp()
+    print("whats up")
+end
+
+local worker = Worker:new("Joe", 22, "Engineer")
+worker:whatsUp()
+worker:greet()
+```
+
+> Please know that the class is just a clua written module and the interpreter does not have a switch functionality. This means that it is not the perfect. This basically means that written functions are injected into the payloads of clua.
+
