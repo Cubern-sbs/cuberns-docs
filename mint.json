@@ -68,6 +68,13 @@
     {
       "group": "Tutorials",
       "pages": [
+        "plugins/Tutorials/accessing-gizmo-mixins",
+        "plugins/Tutorials/instancing-an-object"
+      ]
+    },
+    {
+      "group": "Tutorials",
+      "pages": [
         "tutorials/basics",
         "tutorials/signals",
         "tutorials/error-handling",
