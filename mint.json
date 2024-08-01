@@ -36,6 +36,10 @@
     {
         "name": "Plugins",
         "url": "plugins"
+    },
+    {
+      "name": "Updates",
+      "url": "updates"
     }
 ],
   "navigation": [
@@ -63,6 +67,13 @@
       "group": "API",
       "pages": [
         "plugins/API/pluginservices"
+      ]
+    },
+    {
+      "group": "Updates",
+      "pages": [
+        "updates/client-updates",
+        "updates/workshop-updates"
       ]
     },
     {
