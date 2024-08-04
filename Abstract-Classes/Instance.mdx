@@ -11,8 +11,9 @@ Returns the name of the `Instance`
 
 ## Functions
 #### `FindFirstChild(string name)`
-Returns the child with the name given in parameter else it returns `Nil`. An example:
+Returns the child with the name specified in the `name` parameter; however, if the child does not exist, then it'll return `Nil`. An example:
 ```lua
+-- Anchors the child named "cube1" inside the "Cube" object which is located inside the game's Map object
 Map["Cube"]:FindFirstChild("cube1").anchored = true
 ```
 
