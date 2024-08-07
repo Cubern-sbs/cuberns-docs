@@ -17,3 +17,18 @@ and this will host the docs locally on your computer. This command will automati
 ## Contributing
 You can fork this repository and make changes to the documentation and open up a newer pull-request. If you have found out a issue you can consider opening a issue. One of contributors will see and make changes to fix that. You're issue will be closed and marked as "duplicate" if the issue was already reported.
 
+## Classes layout
+The classes pages are in a flow of:
+```
+## Properties
+#### Property
+About the property
+
+## Functions
+#### Function(parameter: ParameterType, default_parameter = defaultValue)
+About the function + example of usage (if possible)
+
+## Signals
+#### Signal
+About the signal
+```
