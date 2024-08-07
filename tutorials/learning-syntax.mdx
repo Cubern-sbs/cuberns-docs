@@ -1,0 +1,51 @@
+---
+title: 'Learning the Syntax'
+description: 'Learn the syntax of clua'
+icon: 'seal-question'
+---
+
+In this tutorial we will be covering basics of the language and its syntax for-example about if statements or loops or variables.
+
+## Diving into the syntax
+### Variables
+Variables are used like containers which store a value. These variables can be set and also be read in the [source-code](https://en.wikipedia.org/wiki/Source_code).
+There are 2 ways to define variables in clua. First we can make use of the keyword `local` which tells the [interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing)) to create a variable which is then followed by the name of the variable with:
+```lua
+local MyVariable = 2
+```
+The `MyVariable` is the name for the variable. The `=` tells to set this as the value which is followed by the value (which is 2 in this example). Now a variable known as `MyVariable` has been declared which holds the value of 2.
+Now this variable can have the value its holding set to something different. So lets go and make `MyVariable` hold a string sentence:
+```lua
+MyVariable = "Wow! I just love programming <3"
+```
+We can also declare variables without the use of `local`. Like:
+```lua
+MyVariable = "Yay!"
+```
+Now what clua will do here is that it will check if `MyVariable` exists then it will try to update its value to "Yay!" and if it doesnt exist then it will create a newer variable called `MyVariable` which will hold the value `Yay!`.
+
+---
+Now, lets dig into "constants" or `const`. This is a keyword in clua which tells the interpreter that once its value is set, no-one can change it. Like:
+```go
+const myName = "Arexvy"
+```
+Now if we try to change its value with:
+```go
+myName = "Cubern"
+```
+the interpreter would straight up deny since it was told to not **allow anyone else to change the value this variable holds** and this will just end up erroring and not let the script run.
+
+### Booleans
+We can imagine booleans same as "yes" or "no". But rather then "yes" or "no" its "true" or "false".
+
+### If statements
+
+### Loops 
+
+### Functions
+
+### Signals
+
+### Common functions
+
+### Global variables

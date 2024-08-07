@@ -36,24 +36,13 @@
     {
         "name": "Plugins",
         "url": "plugins"
-    },
-    {
-      "name": "Updates",
-      "url": "updates"
     }
 ],
   "navigation": [
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "clua-v-lua"
-      ]
-    },
-    {
-      "group": "Errors",
-      "pages": [
-        "Errors/index"
+        "introduction"
       ]
     },
     {
@@ -70,13 +59,6 @@
       ]
     },
     {
-      "group": "Updates",
-      "pages": [
-        "updates/client-updates",
-        "updates/workshop-updates"
-      ]
-    },
-    {
       "group": "Tutorials",
       "pages": [
         "plugins/Tutorials/accessing-gizmo-mixins",
@@ -86,8 +68,7 @@
     {
       "group": "Tutorials",
       "pages": [
-        "tutorials/basics",
-        "tutorials/signals",
+        "tutorials/learning-syntax",
         "tutorials/error-handling",
         "tutorials/starter-character",
         "tutorials/using-team-create"
