@@ -35,10 +35,180 @@ myName = "Cubern"
 ```
 the interpreter would straight up deny since it was told to not **allow anyone else to change the value this variable holds** and this will just end up erroring and not let the script run.
 
+### Learning about comments
+
+Comments in Clua are lines of text in your code that the interpreter ignores during execution. They are useful for adding explanations, notes, or temporarily disabling parts of your code. Clua supports both single-line and multi-line comments.
+
+#### Single-Line Comments
+
+To create a single-line comment, you use two hyphens (`--`). Everything following the `--` on that line will be treated as a comment:
+
+```lua
+-- This is a single-line comment in Clua
+local MyVariable = 10  -- You can also add comments at the end of a line
+```
+
+In the example above, the comment `-- This is a single-line comment in Clua` is ignored by the interpreter. The line `local MyVariable = 10` is executed normally, and the comment following it is ignored.
+
+#### Multi-Line Comments
+
+For comments that span multiple lines, Clua allows the use of `--[[` to open the comment and `]]` to close it. Everything between these markers is treated as a comment:
+
+```lua
+--[[
+This is a multi-line comment.
+You can write anything here,
+and it will be ignored by the interpreter.
+]]
+
+local MyVariable = 10  -- This code will run normally
+```
+
+Multi-line comments are particularly useful for temporarily disabling large blocks of code or for adding detailed explanations.
+
+Comments are a powerful tool for making your Clua code more understandable and maintainable. By using comments, you can explain your logic, leave notes for yourself or others, and manage your code more effectively.
 ### If statements
+In Clua, the `if` statement is used to execute a block of code based on a condition. The basic syntax of an `if` statement is:
+
+```lua
+if <condition> then
+    -- code to execute if the condition is true
+end
+```
+
+#### Example 1: Basic If Statement
+
+```lua
+local number = 10
+
+if number > 5 then
+    printl("Number is greater than 5")
+end
+```
+
+In this example, since `number` is 10, the condition `number > 5` is true, so the message "Number is greater than 5" will be printed.
+
+#### Example 2: If-Else Statement
+
+```lua
+local number = 3
+
+if number > 5 then
+    printl("Number is greater than 5")
+else
+    printl("Number is 5 or less")
+end
+```
+
+Here, the condition `number > 5` is false, so the code in the `else` block is executed, printing "Number is 5 or less".
+
+#### Example 3: If-ElseIf-Else Statement
+
+```lua
+local number = 7
+
+if number > 10 then
+    printl("Number is greater than 10")
+elseif number > 5 then
+    printl("Number is greater than 5 but 10 or less")
+else
+    printl("Number is 5 or less")
+end
+```
+
+In this case, the condition `number > 10` is false, so the `elseif` condition `number > 5` is checked. Since it's true, "Number is greater than 5 but 10 or less" is printed.
+
+#### Nesting If Statements
+
+Clua also allows you to nest `if` statements for more complex conditions:
+
+```lua
+local number = 8
+
+if number > 5 then
+    if number < 10 then
+        printl("Number is between 6 and 9")
+    end
+end
+```
+
+Here, the outer `if` checks if `number` is greater than 5. Since it's true, the nested `if` checks if `number` is less than 10. Both conditions are true, so "Number is between 6 and 9" is printed.
+
+This section introduces the concept of `if` statements, explains the syntax, and provides examples to illustrate how they work in Clua.
 
 ### Loops 
+Loops in Clua allow you to execute a block of code multiple times. They are useful for tasks that require repetition, such as iterating over a collection or performing an action a set number of times. Clua supports `for`, `while`, and `repeat-until` loops.
 
+#### For Loops
+
+A `for` loop is commonly used when you know in advance how many times you want to execute a block of code.
+##### Example 1: Basic For Loop
+
+```lua
+for i = 1, 5 do
+    printl("Iteration: " .. i)
+end
+```
+
+This loop runs 5 times, printing "Iteration: 1" to "Iteration: 5".
+
+##### Example 2: For Loop with Step
+
+```lua
+for i = 10, 1, -2 do
+    printl("Countdown: " .. i)
+end
+```
+
+This loop counts down from 10 to 2 in steps of 2, printing "Countdown: 10", "Countdown: 8", etc.
+
+#### While Loops
+
+A `while` loop repeats a block of code as long as a specified condition is true. The basic syntax is:
+
+```lua
+while condition do
+    -- code to execute repeatedly
+end
+```
+
+##### Example: Basic While Loop
+
+```lua
+local i = 1
+
+while i <= 5 do
+    printl("While Loop Iteration: " .. i)
+    i = i + 1
+end
+```
+
+In this example, the loop runs as long as `i` is less than or equal to 5, printing "While Loop Iteration: 1" to "While Loop Iteration: 5".
+
+#### Repeat-Until Loops
+
+A `repeat-until` loop is similar to a `while` loop but with a key difference: it checks the condition after the loop body has executed. This means the loop always runs at least once. The syntax is:
+
+```lua
+repeat
+    -- code to execute repeatedly
+until condition
+```
+
+##### Example: Basic Repeat-Until Loop
+
+```lua
+local i = 1
+
+repeat
+    printl("Repeat-Until Loop Iteration: " .. i)
+    i = i + 1
+until i > 5
+```
+
+In this example, the loop runs until `i` is greater than 5, printing "Repeat-Until Loop Iteration: 1" to "Repeat-Until Loop Iteration: 5".
+
+Loops are essential for performing repetitive tasks in Clua. By using `for`, `while`, and `repeat-until` loops, you can create efficient, readable code that handles a variety of repetitive tasks.
 ### Functions
 
 ### Signals
