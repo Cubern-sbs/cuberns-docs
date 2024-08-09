@@ -14,12 +14,10 @@
   "metadata": {
       "og:image": "images/untitled.png"
   },
+  "background": {
+    "style": "windows"
+  },
   "anchors": [
-      {
-          "name": "Official Lua Docs",
-          "icon": "code",
-          "url": "https://www.lua.org/docs.html"
-      },
       {
           "name": "Our Discord Server",
           "icon": "discord",
@@ -69,9 +67,10 @@
       "group": "Tutorials",
       "pages": [
         "tutorials/learning-syntax",
-        "tutorials/error-handling",
         "tutorials/starter-character",
-        "tutorials/using-team-create"
+        "tutorials/using-team-create",
+        "tutorials/static-typing",
+        "tutorials/increasing-performance"
       ]
     },
     {

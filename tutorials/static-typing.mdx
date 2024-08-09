@@ -1,0 +1,72 @@
+---
+title: 'How to use static-typing in clua'
+description: 'Learn to static-type in clua'
+icon: 'computer-classic'
+---
+
+With using static-typing, clua can detect more errors and too in-depth without the need to running the code. 
+
+Overall, typed programming gives you a more structured experience. It helps prevent errors and improves the self-documenting aspect of your scripts. This is especially helpful when you're working in a team or on a long-term project: studies have shown that developers spend most of their time reading other people's code, or scripts they wrote in the past and forgot about. The clearer and the more structured the code, the faster it is to understand, the faster you can move forward.
+
+## Using static-typing in clua
+To define the type of a variable, parameter, or constant, write a colon after the name, followed by its type. For example, `local Health: int = 100`. This forces the variable to hold the value of same type **only**:
+```lua
+local Health: int = 100
+
+Health = "String"
+```
+This will error: "Expected int got string" and the script execution will stop.
+
+We can also use cuberns native objects like `Part` as demonstrated below:
+```lua
+local Cube: Part = Map.Cube
+```
+\
+Functions also do support static-typing with their parameters. An example shows:
+```lua
+function StaticTypedFunction(whatToPrint: string)
+    return whatToPrint;
+end
+
+printl(StaticTypedFunction("Hello, World!"))
+```
+
+## Specify the return type of a function with the arrow `->`
+To define the return type of a function, write a dash and a right angle bracket -> after its declaration, followed by the return type:
+```lua
+function getCube() -> Part
+    return Map.Cube
+end
+
+printl(getCube().name)
+```
+
+We can also return `void` or `nil`:
+```lua
+function welcome() -> void
+    printl("Hi!")
+end
+
+welcome()
+```
+
+```lua
+function getCube() -> nil
+    if Cube.Map == nil then
+        return nil
+    end
+    return nil
+end
+
+getCube()
+```
+
+## Specify the element type of an Table
+Currently clua does not support specifying type for a table. However, it is planned:
+```lua
+local MyTable: [int] = { 2, 3, 4 }
+```
+
+## The main question: Typed or dynamic?
+Typed clua and dynamic clua all can co-exist in a same project/game. However, it is recommended to stick with a single style so it looks better and is very easier to read.
+Typed code requires a little bit of more writing which can be tiring. Tho we recommend writing dynamic clua since typed clua is still in early stages of development.
