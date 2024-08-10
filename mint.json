@@ -131,6 +131,7 @@
         "Global/Global",
         {
           "group": "Global Classes",
+          "icon": "earth-americas",
           "pages": [
             "Global/Classes/globalstate",
             "Global/Classes/Json",

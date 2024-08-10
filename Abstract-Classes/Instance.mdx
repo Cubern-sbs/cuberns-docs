@@ -46,30 +46,6 @@ printl(Map["Cube"].GetAttribute("IsThisMyFavourateCube")) -- this will print tru
 ```
 
 ## Signals
-#### `OnBodyEntered`
-This signal is called when a Body enters the `Instance` or touches it. An example:
-```lua
-Map["Cube"]:Connect("OnBodyEntered", __SCRIPT__, "FunctionToCall")
-
-function FunctionToCall(Body)
-    if Body.IsA() == "Player" then
-        printl("Its a player!")
-    end
-end
-```
-
-#### `OnBodyExited`
-This signal is called when a Body leaves the `Instance` or stops touching it. An example:
-```lua
-Map["Cube"]:Connect("OnBodyExited", __SCRIPT__, "FunctionToCall")
-
-function FunctionToCall(Body)
-    if Body.IsA() == "Player" then
-        printl("Player! left")
-    end
-end
-```
-
 #### `OnMouseEntered`
 This signal is called when a mouse hovers over the `Instance`. An example:
 ```lua
