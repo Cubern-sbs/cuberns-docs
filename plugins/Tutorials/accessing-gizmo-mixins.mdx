@@ -6,20 +6,15 @@ icon: 'rotate'
 Before we start, you may question yourself: what is a "gizmo"? In simple words a gizmo is a tool used for transform which looks like:
 
 <img
-  className="block dark:hidden"
+  className="rounded-lg"
   src="/images/prev_gizmo.png"
   alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/prev_gizmo.png"
-  alt="Hero Dark"
 />
 
 ## Telling the workshop to select another selected object
 To tell the workshop to select another keyword we can make use of `PluginServices` and request it.
 ```lua
-PluginServices:SetSelected(Map["Cube"]) -- this will return nil if the object is not found.
+PluginServices:SetSelected(Map.Cube) -- this will return nil if the object is not found.
 ```
 
 To change gizmo modes for example to set it to rotation or scale or move we can use the `SetGizmoMode(int mode)`:
@@ -39,6 +34,6 @@ You can get if already the user has selected an object with `GetSelected` which 
 local object_selected = PluginServices:GetSelected()
 
 if object_selected == nil then 
-    PluginServices:SetSelected(Map["Cube"])
+    PluginServices:SetSelected(Map.Cube)
 end
 ```

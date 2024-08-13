@@ -10,7 +10,7 @@ Soft errors are errors which would occur however the script would still continue
 We are actively working to make error handling very easy. In functions like `Connect` or `ConnectEvent` clua will return nil or a string. If a error occurs: then it will return a string which will be the error message. 
 Let us see an example:
 ```lua
-local Cube = Map["Cube"]
+local Cube = Map.Cube
 local error = Cube:Connect("OnBodyEntered", __SCRIPT__, "ToCallFunc") -- the value of error will be nil however if we try to conenct again:
 error = Cube:Connect("OnBodyEntered", __SCRIPT__, "ToCallFunc") -- the value of error will be a string of: 'OnBodyEntered(Signal) is already connected to a function!'
 error = Cube:Connect("OnBodyEntered", __SCRIPT__, "AnotherFunction") -- the value of error will be a string as well. Clua does not support binding a single signal to multiple functions. However this is going to be allowed in near-future. It will return the same error: : 'OnBodyEntered(Signal) is already connected to a function!'
@@ -22,7 +22,7 @@ end
 
 ### Now lets see it step by step
 ```lua
-local Cube = Map["Cube"]
+local Cube = Map.Cube
 local error = Cube:Connect("OnBodyEntered", __SCRIPT__, "ToCallFunc")
 if error == nil then
     printl("We had NO errors!")

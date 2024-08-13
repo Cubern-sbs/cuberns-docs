@@ -17,7 +17,7 @@ The occupant property holds a Player value. The value is `nil` if no one is seat
 #### `OnPlayerSit`
 This signal is called when a player sits on the seat. An example:
 ```lua
-Map["Seat"]:Connect("OnPlayerSit", __SCRIPT__, "FunctionToCall")
+Map.Seat:Connect("OnPlayerSit", __SCRIPT__, "FunctionToCall")
 
 function FunctionToCall(player) 
     printl(player.username .. " just took the seat!")
@@ -27,7 +27,7 @@ end
 #### `OnPlayerLeft`
 This signal is called when a player leaves the seat. An example:
 ```lua
-Map["Seat"]:Connect("OnPlayerLeft", __SCRIPT__, "FunctionToCall")
+Map.Seat:Connect("OnPlayerLeft", __SCRIPT__, "FunctionToCall")
 
 function FunctionToCall(player) 
     printl(player.username .. " just left the seat!")
