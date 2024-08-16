@@ -31,6 +31,13 @@ end
 printl(StaticTypedFunction("Hello, World!"))
 ```
 
+\
+Clua now also supports `Table` for example:
+```lua
+function StaticTypedFunction(myTable : Table) -> Table 
+    return myTable
+end
+```
 ## Specify the return type of a function with the arrow `->`
 To define the return type of a function, write a dash and a right angle bracket -> after its declaration, followed by the return type:
 ```lua
@@ -39,26 +46,6 @@ function getCube() -> Part
 end
 
 printl(getCube().name)
-```
-
-We can also return `void` or `nil`:
-```lua
-function welcome() -> void
-    printl("Hi!")
-end
-
-welcome()
-```
-
-```lua
-function getCube() -> nil
-    if Cube.Map == nil then
-        return nil
-    end
-    return nil
-end
-
-getCube()
 ```
 
 ## Specify the element type of an Table
