@@ -22,5 +22,30 @@ Returns the rotation of `Instance`
 #### `LookAt(Vector3 to)`
 An example:
 ```lua
-Map["Cube"]:LookAt(Map["Cube1"].position)
+Map.Cube:LookAt(Map.Cube1.position)
+```
+
+## Signals
+#### `OnBodyEntered`
+This signal is called when a Body enters the `Instance` or touches it. An example:
+```lua
+Map.Cube:Connect("OnBodyEntered", __SCRIPT__, "FunctionToCall")
+
+function FunctionToCall(Body)
+    if Body.IsA() == "Player" then
+        printl("Its a player!")
+    end
+end
+```
+
+#### `OnBodyExited`
+This signal is called when a Body leaves the `Instance` or stops touching it. An example:
+```lua
+Map.Cube:Connect("OnBodyExited", __SCRIPT__, "FunctionToCall")
+
+function FunctionToCall(Body)
+    if Body.IsA() == "Player" then
+        printl("Player! left")
+    end
+end
 ```
