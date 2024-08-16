@@ -47,6 +47,17 @@ end
 
 printl(getCube().name)
 ```
+## Making variables or function parameters nill-able
+By default if we make use of:
+```lua
+local myvariable: string = "haha!"
+```
+we cannot assign it `nil` and it will cause a script-runtime error exception stopping the execution of the clua script. However, if we add the `?` (question-mark) right next to the data-type: this will tell the interpreter to accept a nil-value as well. For example:
+```lua
+local myvariable : string? = nil -- this will not error!
+myvariable = "haha!" -- this will not error!
+myvariable = 22 -- this will error!
+```
 
 ## Specify the element type of an Table
 Currently clua does not support specifying type for a table. However, it is planned:
