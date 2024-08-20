@@ -59,6 +59,13 @@ myvariable = "haha!" -- this will not error!
 myvariable = 22 -- this will error!
 ```
 
+We can also apply these to function parameters or function return type. For example:
+```lua
+function GetMyCube(cubeName: string?) -> Part?
+    return Map:FindChild(cubeName) 
+end
+```
+
 ## Specify the element type of an Table
 Currently clua does not support specifying type for a table. However, it is planned:
 ```lua
