@@ -37,11 +37,10 @@ function FunctionToCall(message)
     printl(message) -- this should print "Dude, did you know why I am filled with hate for Cube5? That thing just keeps on being renamed to @Cube@5! Weird right? I guess its time to get rid of it. I think you should too!"
 
     -- since we also want the cube to be destroyed:
-    local Cube5 : Part? = Map:FindChild("Cube5")
+    local Cube5 = Map:FindChild("Cube5")
 
     if Cube5 != nil then 
         Cube5:Destroy()
     end
 end
 ```
-

@@ -13,7 +13,7 @@ Returns the name of the `Instance`
 #### `FindChild(string name)`
 Returns the child else returns null. An example:
 ```lua
-local cube1 : Part = Map.Cube.FindChild("Cube1")
+local cube1 = Map.Cube.FindChild("Cube1")
 ```
 
 #### `FindFirstChild(string name)`
@@ -23,6 +23,10 @@ Returns the child with the name specified in the `name` parameter; however, if t
 Map.Cube:FindFirstChild("cube1").anchored = true
 ```
 
+
+#### `anchored: bool`
+Returns if `Instance` is anchored or not.
+
 #### `Destroy()`
 Destroys the `Instance`. An example:
 ```lua
@@ -31,7 +35,7 @@ Map.Cube:Destroy()
 #### `IsA()`
 Returns the type of the object as a string.
 
-#### `new(string className)`
+#### `new(string className)` (static)
 Create a new instance. An example:
 ```lua
 local part = Instance.new("Part")

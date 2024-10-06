@@ -30,17 +30,6 @@ MyVariable = "Yay!"
 ```
 Now what clua will do here is that it will check if `MyVariable` exists then it will try to update its value to "Yay!" and if it doesnt exist then it will create a newer variable called `MyVariable` which will hold the value `Yay!`.
 
----
-Now, lets dig into "constants" or `const`. This is a keyword in clua which tells the interpreter that once its value is set, no-one can change it. Like:
-```go
-const myName = "Arexvy"
-```
-Now if we try to change its value with:
-```go
-myName = "Cubern"
-```
-the interpreter would straight up deny since it was told to not **allow anyone else to change the value this variable holds** and this will just end up erroring and not let the script run.
-
 ### Learning about comments
 
 Comments in Clua are lines of text in your code that the interpreter ignores during execution. They are useful for adding explanations, notes, or temporarily disabling parts of your code. Clua supports both single-line and multi-line comments.
